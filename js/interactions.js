@@ -163,7 +163,7 @@ const Interactions = (() => {
                     const page = mutation.target;
                     if (page.id === 'page-sea-lion-dino' && page.classList.contains('active')) {
                         setTimeout(() => {
-                            dinoImg.src = 'assets/images/dino/dino-supportive.svg';
+                            dinoImg.src = 'assets/images/dino/dino-real.png';
                         }, 500);
                     }
                 }
@@ -180,39 +180,27 @@ const Interactions = (() => {
     function initResponse() {
         const btnYes = document.getElementById('btn-yes');
         const btnMad = document.getElementById('btn-mad');
-        const finalYes = document.getElementById('final-yes');
-        const finalMad = document.getElementById('final-mad');
-        const finalLetterContent = document.getElementById('final-letter-content');
-
-        function showFinalLetter() {
-            setTimeout(() => {
-                if (finalLetterContent) {
-                    finalLetterContent.classList.remove('hidden');
-                    finalLetterContent.classList.add('visible');
-                }
-            }, 1500);
-        }
 
         if (btnYes) {
             btnYes.addEventListener('click', () => {
                 // Show celebration
                 createConfetti();
                 
-                // Show positive response
-                if (finalYes) finalYes.classList.remove('hidden');
-                if (finalMad) finalMad.classList.add('hidden');
-
-                showFinalLetter();
+                // Store response and navigate to final letter
+                localStorage.setItem('mbul-response', 'yes');
+                setTimeout(() => {
+                    PageManager.goTo('final-letter');
+                }, 800);
             });
         }
 
         if (btnMad) {
             btnMad.addEventListener('click', () => {
-                // Show respectful response
-                if (finalYes) finalYes.classList.add('hidden');
-                if (finalMad) finalMad.classList.remove('hidden');
-
-                showFinalLetter();
+                // Store response and navigate to final letter
+                localStorage.setItem('mbul-response', 'mad');
+                setTimeout(() => {
+                    PageManager.goTo('final-letter');
+                }, 300);
             });
         }
     }

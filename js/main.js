@@ -133,6 +133,36 @@ const PageManager = (() => {
                 // Reset response state
                 resetResponse();
                 break;
+            case 'final-letter':
+                // Read stored response and show appropriate message
+                const response = localStorage.getItem('mbul-response');
+                const finalYes = document.getElementById('final-yes');
+                const finalMad = document.getElementById('final-mad');
+                const finalLetterContent = document.getElementById('final-letter-content');
+                
+                if (finalYes) finalYes.classList.add('hidden');
+                if (finalMad) finalMad.classList.add('hidden');
+                if (finalLetterContent) {
+                    finalLetterContent.classList.add('hidden');
+                    finalLetterContent.classList.remove('visible');
+                }
+                
+                setTimeout(() => {
+                    if (response === 'yes' && finalYes) {
+                        finalYes.classList.remove('hidden');
+                    } else if (response === 'mad' && finalMad) {
+                        finalMad.classList.remove('hidden');
+                    }
+                    
+                    // Show letter after a delay
+                    setTimeout(() => {
+                        if (finalLetterContent) {
+                            finalLetterContent.classList.remove('hidden');
+                            finalLetterContent.classList.add('visible');
+                        }
+                    }, 1200);
+                }, 300);
+                break;
         }
     }
 
@@ -149,7 +179,7 @@ const PageManager = (() => {
             oghText.textContent = 'Tap the sea lion';
         }
         if (dinoImg) {
-            dinoImg.src = 'assets/images/dino/dino-sad.svg';
+            dinoImg.src = 'assets/images/dino/dino-real.png';
         }
     }
 
