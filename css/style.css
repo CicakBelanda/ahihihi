@@ -179,10 +179,8 @@ body::before {
     height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--page-padding-y) var(--page-padding-x);
+    display: block;
+    padding: 0;
     opacity: 0;
     visibility: hidden;
     transform: translateX(30px);
@@ -223,9 +221,15 @@ body::before {
 .page-content {
     max-width: var(--max-width-default);
     width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     margin: 0 auto;
     text-align: center;
-    padding-bottom: var(--space-3xl);
+    padding: var(--page-padding-y) var(--page-padding-x);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -771,6 +775,11 @@ body::before {
 
 .site-footer.visible {
     opacity: 1;
+}
+
+/* Add padding to final letter page to prevent content hidden behind footer */
+#page-final-letter .page-content {
+    padding-bottom: calc(var(--space-3xl) + 60px);
 }
 
 /* ===== CONFETTI ===== */
