@@ -1,0 +1,357 @@
+/* ===== PHASE 2.4 — ADVANCED ANIMATIONS ===== */
+
+/* ===== HEARTBEAT ===== */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.2); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); }
+    60% { transform: scale(1); }
+}
+
+/* ===== ENVELOPE ANIMATIONS ===== */
+.envelope-wrapper.opening {
+    animation: envelope-wrapper-pulse 0.6s var(--ease-out-back);
+}
+
+@keyframes envelope-wrapper-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.envelope-wrapper.opening .envelope-flap {
+    animation: envelope-flip 0.8s var(--ease-out-expo) forwards;
+}
+
+@keyframes envelope-flip {
+    0% { transform: rotateX(0); }
+    100% { transform: rotateX(180deg); }
+}
+
+/* Letter rising out of envelope */
+.envelope-wrapper.opening .letter-preview {
+    animation: letter-rise 0.6s var(--ease-out-back) 0.4s forwards;
+}
+
+@keyframes letter-rise {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-20px); opacity: 0; }
+}
+
+/* ===== STAGGERED CASE ITEM REVEAL ===== */
+.case-item {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+}
+
+.case-item.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===== GUILTY STAMP ===== */
+.case-verdict.stamped {
+    animation: guilty-stamp 0.6s var(--ease-out-back) forwards;
+}
+
+@keyframes guilty-stamp {
+    0% {
+        opacity: 0;
+        transform: scale(3) rotate(-15deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(0.9) rotate(3deg);
+    }
+    70% {
+        transform: scale(1.05) rotate(-1deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* ===== OGH SHAKE ===== */
+@keyframes ogh-shake {
+    0%, 100% { transform: translateX(0) rotate(0); }
+    15% { transform: translateX(-6px) rotate(-2deg); }
+    30% { transform: translateX(5px) rotate(2deg); }
+    45% { transform: translateX(-4px) rotate(-1deg); }
+    60% { transform: translateX(3px) rotate(1deg); }
+    75% { transform: translateX(-2px) rotate(0); }
+}
+
+/* ===== CONFETTI ===== */
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(1080deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* ===== FLOAT (characters) ===== */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ===== SPARKLE ===== */
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+/* ===== HEART PARTICLES ===== */
+.heart-particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+    animation: heart-rise 2.5s var(--ease-out-expo) forwards;
+}
+
+@keyframes heart-rise {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-60px) scale(1.1) rotate(10deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-120px) scale(0.6) rotate(-10deg);
+    }
+}
+
+/* ===== PULSE (OGH text) ===== */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.ogh-text.pulse {
+    animation: pulse 0.3s var(--ease-out-back);
+}
+
+/* ===== WIGGLE (celebration) ===== */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+/* ===== BOUNCE ===== */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ===== FADE IN UP (generic reveal) ===== */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== SCALE IN ===== */
+@keyframes scale-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== CHARACTER FLOAT ANIMATIONS ===== */
+.red-panda-peek img,
+.red-panda-sitting img {
+    animation: float 3s ease-in-out infinite;
+}
+
+.red-panda-peek img {
+    animation-delay: 0.5s;
+}
+
+/* ===== SEA LION TAP FEEDBACK ===== */
+.sea-lion-character.ogh-pose img {
+    animation: wiggle 0.4s var(--ease-out-back);
+}
+
+/* ===== DINO TRANSITION ===== */
+.dino-character img {
+    transition: opacity 0.4s ease, transform 0.4s var(--ease-out-back);
+}
+
+/* ===== FINAL LETTER REVEAL ===== */
+.final-letter-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s var(--ease-out-expo) 0.3s, transform 1s var(--ease-out-expo) 0.3s;
+}
+
+.final-letter-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== CELEBRATION CONTAINER ===== */
+.celebrating .sea-lion-character img {
+    animation: wiggle 0.5s ease infinite;
+}
+
+.celebrating .red-panda-sitting img {
+    animation: bounce 0.6s ease infinite;
+}
+
+/* ===== TIMELINE PROGRESSIVE REVEAL ===== */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+}
+
+.timeline-item.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===== LOVE ITEM HOVER ===== */
+.love-item {
+    transition: all var(--duration-normal) var(--ease-out-back);
+}
+
+/* ===== LETTER PAPER ENTRANCE ===== */
+.final-letter-content.visible .letter-paper {
+    animation: letter-unfold 0.8s var(--ease-out-expo);
+}
+
+@keyframes letter-unfold {
+    0% {
+        transform: rotateX(10deg) scale(0.95);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===== SIGNATURE WRITING ===== */
+.final-letter-content.visible .signature {
+    animation: signature-write 1s var(--ease-out-expo) 1s both;
+}
+
+@keyframes signature-write {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== GLOW PULSE (for opening) ===== */
+@keyframes glow-pulse {
+    0%, 100% { box-shadow: var(--shadow-md); }
+    50% { box-shadow: var(--shadow-lg), var(--shadow-glow); }
+}
+
+#page-opening .envelope-wrapper {
+    animation: glow-pulse 2s ease-in-out infinite;
+}
+
+#page-opening .envelope-wrapper.opening {
+    animation: none;
+}
+
+/* ===== RIPPLE EFFECT (buttons) ===== */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s, opacity 0.6s;
+    opacity: 0;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: 0s;
+}
+
+/* ===== PAGE TRANSITIONS ===== */
+.page {
+    will-change: transform, opacity;
+}
+
+/* ===== RESPONSIVE ANIMATIONS ===== */
+@media (min-width: 768px) {
+    .red-panda-peek img,
+    .red-panda-sitting img {
+        animation-duration: 4s;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .red-panda-peek img,
+    .red-panda-sitting img {
+        animation: none;
+    }
+    
+    .heart-particle {
+        display: none;
+    }
+    
+    .confetti-piece {
+        animation-duration: 0.01ms;
+    }
+    
+    .case-verdict.stamped {
+        animation: none;
+    }
+    
+    .case-item {
+        transition-duration: 0.01ms;
+    }
+    
+    .page {
+        transition-duration: 0.01ms;
+    }
+    
+    .timeline-item {
+        transition-duration: 0.01ms;
+    }
+    
+    .final-letter-content {
+        transition-duration: 0.01ms;
+    }
+}

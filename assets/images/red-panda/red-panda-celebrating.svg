@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="red-panda-celebrating">
+  <ellipse cx="100" cy="140" rx="45" ry="50" fill="#D95D72"/>
+  <circle cx="100" cy="80" r="38" fill="#E88B5A"/>
+  <circle cx="70" cy="50" r="14" fill="#E88B5A"/>
+  <circle cx="130" cy="50" r="14" fill="#E88B5A"/>
+  <circle cx="70" cy="50" r="8" fill="#FFDDE3"/>
+  <circle cx="130" cy="50" r="8" fill="#FFDDE3"/>
+  <!-- Star eyes -->
+  <text x="72" y="92" font-size="16" fill="#2B2426" text-anchor="middle">★</text>
+  <text x="128" y="92" font-size="16" fill="#2B2426" text-anchor="middle">★</text>
+  <ellipse cx="100" cy="95" rx="6" ry="4" fill="#2B2426"/>
+  <!-- Open happy mouth -->
+  <ellipse cx="100" cy="103" rx="8" ry="5" fill="#2B2426"/>
+  <ellipse cx="100" cy="105" rx="5" ry="3" fill="#F58FA3"/>
+  <circle cx="76" cy="92" r="5" fill="#F58FA3" opacity="0.6"/>
+  <circle cx="124" cy="92" r="5" fill="#F58FA3" opacity="0.6"/>
+  <!-- Waving tail -->
+  <path d="M145 150 Q170 120 155 80 Q150 65 140 60" fill="#E88B5A" stroke="#E88B5A" stroke-width="8" stroke-linecap="round"/>
+  <!-- Hearts -->
+  <path d="M45 50 C45 45 50 40 55 40 C60 40 65 45 65 50 C65 60 55 68 55 68 C55 68 45 60 45 50" fill="#F58FA3" opacity="0.8"/>
+  <path d="M145 25 C145 22 148 19 151 19 C154 19 157 22 157 25 C157 30 151 34 151 34 C151 34 145 30 145 25" fill="#F58FA3" opacity="0.7"/>
+</svg>

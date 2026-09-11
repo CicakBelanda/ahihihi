@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="red-panda-happy">
+  <ellipse cx="100" cy="140" rx="45" ry="50" fill="#D95D72"/>
+  <circle cx="100" cy="80" r="38" fill="#E88B5A"/>
+  <circle cx="70" cy="50" r="14" fill="#E88B5A"/>
+  <circle cx="130" cy="50" r="14" fill="#E88B5A"/>
+  <circle cx="70" cy="50" r="8" fill="#FFDDE3"/>
+  <circle cx="130" cy="50" r="8" fill="#FFDDE3"/>
+  <!-- Happy eyes (closed) -->
+  <path d="M76 85 Q82 79 88 85" fill="none" stroke="#2B2426" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M112 85 Q118 79 124 85" fill="none" stroke="#2B2426" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="100" cy="95" rx="6" ry="4" fill="#2B2426"/>
+  <!-- Big smile -->
+  <path d="M90 100 Q100 112 110 100" fill="none" stroke="#2B2426" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="76" cy="92" r="5" fill="#F58FA3" opacity="0.6"/>
+  <circle cx="124" cy="92" r="5" fill="#F58FA3" opacity="0.6"/>
+  <!-- Raised tail -->
+  <path d="M145 150 Q175 110 160 70 Q155 55 145 50" fill="#E88B5A" stroke="#E88B5A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M148 145 Q170 108 158 75" fill="none" stroke="#FFDDE3" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <!-- Sparkles -->
+  <path d="M50 40 L54 46 L60 50 L54 54 L50 60 L46 54 L40 50 L46 46 Z" fill="#FFDDE3" opacity="0.7"/>
+  <path d="M155 35 L158 39 L162 42 L158 45 L155 49 L152 45 L148 42 L152 39 Z" fill="#FFDDE3" opacity="0.7"/>
+</svg>

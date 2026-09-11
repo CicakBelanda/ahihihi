@@ -1,0 +1,26 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="sea-lion-ogh">
+  <!-- Body -->
+  <ellipse cx="100" cy="130" rx="55" ry="40" fill="#6B8E9B"/>
+  <!-- Head -->
+  <circle cx="100" cy="75" r="32" fill="#8BA9B5"/>
+  <!-- Snout -->
+  <ellipse cx="100" cy="95" rx="22" ry="15" fill="#A3BFC9"/>
+  <!-- Eyes (squinting from effort) -->
+  <path d="M83 72 Q88 68 93 72" fill="none" stroke="#2B2426" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M107 72 Q112 68 117 72" fill="none" stroke="#2B2426" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Nose -->
+  <ellipse cx="100" cy="88" rx="5" ry="3.5" fill="#2B2426"/>
+  <!-- Open mouth (ogh!) -->
+  <ellipse cx="100" cy="102" rx="10" ry="6" fill="#2B2426"/>
+  <ellipse cx="100" cy="105" rx="6" ry="3" fill="#D95D72"/>
+  <!-- Whiskers (wiggly) -->
+  <path d="M75 92 Q70 88 65 92" fill="none" stroke="#2B2426" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M75 98 Q70 102 65 98" fill="none" stroke="#2B2426" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M125 92 Q130 88 135 92" fill="none" stroke="#2B2426" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M125 98 Q130 102 135 98" fill="none" stroke="#2B2426" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Flippers (raised in effort) -->
+  <ellipse cx="55" cy="120" rx="15" ry="8" fill="#8BA9B5" transform="rotate(-30 55 120)"/>
+  <ellipse cx="145" cy="120" rx="15" ry="8" fill="#8BA9B5" transform="rotate(30 145 120)"/>
+  <!-- Tail -->
+  <path d="M155 140 Q175 130 175 115 Q175 105 165 100" fill="#8BA9B5" stroke="#8BA9B5" stroke-width="6" stroke-linecap="round"/>
+</svg>

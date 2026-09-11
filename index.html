@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="A personal interactive apology and love letter for Mbul.">
+    <meta name="theme-color" content="#FFF3F5">
+    <meta property="og:title" content="For Mbul ❤️">
+    <meta property="og:description" content="A letter from someone who really, really owes you a video.">
+    <title>For Mbul ❤️</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Skip link for keyboard accessibility -->
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+    
+    <!-- Music Control -->
+    <button id="music-toggle" class="music-toggle" aria-label="Toggle music" type="button">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M9 18V5l12-2v13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="18" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    </button>
+
+    <!-- Audio Placeholder -->
+    <audio id="bg-music" loop preload="none" aria-hidden="true">
+        <!-- <source src="assets/audio/romantic.mp3" type="audio/mpeg"> -->
+    </audio>
+
+    <main id="main-content">
+        <!-- ===== PAGE 1: OPENING ===== -->
+        <section id="page-opening" class="page active" aria-label="Opening">
+            <div class="page-content">
+                <div class="red-panda-peek" aria-hidden="true">
+                    <img src="assets/images/red-panda/red-panda-neutral.svg" alt="" role="presentation">
+                </div>
+                
+                <h1 class="page-title">For Mbul <span class="heart-icon" aria-hidden="true">❤️</span></h1>
+                <p class="page-subtitle">A letter from someone who really, really owes you a video.</p>
+                
+                <div class="envelope-wrapper" id="envelope" role="button" tabindex="0" aria-label="Open the letter">
+                    <div class="envelope">
+                        <div class="envelope-flap" aria-hidden="true"></div>
+                        <div class="envelope-body">
+                            <div class="letter-preview" aria-hidden="true">
+                                <p>To: Mbul</p>
+                                <p>From: Someone in trouble</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary open-btn" id="open-btn" type="button">
+                    Open it
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 2: ACKNOWLEDGEMENT ===== -->
+        <section id="page-acknowledgement" class="page" aria-label="Acknowledgement">
+            <div class="page-content">
+                <h2 class="page-title">I know you're mad.</h2>
+                <p class="page-text">
+                    And honestly? You have every right to be.
+                </p>
+                <p class="page-text">
+                    I made you a promise. A simple one. And I didn't keep it.
+                </p>
+                <div class="red-panda-sitting" aria-hidden="true">
+                    <img src="assets/images/red-panda/red-panda-sad.svg" alt="" role="presentation">
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="opening" type="button">← Back</button>
+                    <button class="btn btn-primary" data-nav="padel-video" type="button">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 3: THE MISSING PADEL VIDEO ===== -->
+        <section id="page-padel-video" class="page" aria-label="The missing padel video">
+            <div class="page-content">
+                <h2 class="page-title">The Missing Padel Video</h2>
+                <p class="page-text">Let's open the case file.</p>
+                
+                <div class="case-file" id="case-file">
+                    <div class="case-file-header">
+                        <span class="case-number">CASE #001</span>
+                        <span class="case-priority">PRIORITY: HIGH</span>
+                    </div>
+                    
+                    <div class="case-file-body">
+                        <div class="case-item revealed">
+                            <span class="case-label">The Promise:</span>
+                            <span class="case-value">"I'll send you the padel video."</span>
+                        </div>
+                        <div class="case-item revealed">
+                            <span class="case-label">Expected Outcome:</span>
+                            <span class="case-value">Mbul receives video, laughs, feels loved.</span>
+                        </div>
+                        <div class="case-item revealed">
+                            <span class="case-label">Actual Outcome:</span>
+                            <span class="case-value">No video. Mbul is disappointed. Dino is sad.</span>
+                        </div>
+                        <div class="case-item revealed">
+                            <span class="case-label">Responsible Party:</span>
+                            <span class="case-value">Kevin. Just Kevin.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="case-verdict stamped" id="case-verdict" aria-label="Verdict: Guilty">
+                        <span class="verdict-text">GUILTY</span>
+                    </div>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="acknowledgement" type="button">← Back</button>
+                    <button class="btn btn-primary" data-nav="no-excuses" type="button">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 4: NO EXCUSES ===== -->
+        <section id="page-no-excuses" class="page" aria-label="No excuses">
+            <div class="page-content">
+                <h2 class="page-title">No excuses.</h2>
+                <p class="page-text">
+                    I could tell you I was busy. That I forgot. That something came up.
+                </p>
+                <p class="page-text">
+                    But the truth is simpler and worse: I made a promise to you, and I didn't treat it like it mattered.
+                </p>
+                <p class="page-text">
+                    Not sending that video isn't about the video. It's about the fact that I said I would, and then I didn't.
+                </p>
+                <p class="page-text emphasis">
+                    And that's on me.
+                </p>
+                <div class="red-panda-peek" aria-hidden="true">
+                    <img src="assets/images/red-panda/red-panda-embarrassed.svg" alt="" role="presentation">
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="padel-video" type="button">← Back</button>
+                    <button class="btn btn-primary" data-nav="two-years" type="button">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 5: TWO YEARS ===== -->
+        <section id="page-two-years" class="page" aria-label="Two years together">
+            <div class="page-content">
+                <h2 class="page-title">Two years.</h2>
+                <p class="page-text">
+                    It's been two years since we met at Tomoro.
+                </p>
+                <p class="page-text">
+                    Two years of December 14ths. Of inside jokes. Of sea lions and red pandas. Of you being you.
+                </p>
+                
+                <div class="timeline" role="list">
+                    <div class="timeline-item revealed" role="listitem">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Two years ago</span>
+                            <p>Met at Tomoro. You probably don't remember it the same way I do.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item revealed" role="listitem">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">December 14</span>
+                            <p>The day that became ours.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item revealed" role="listitem">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Every day since</span>
+                            <p>Learning you. Loving you. Sometimes messing up.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="red-panda-sitting" aria-hidden="true">
+                    <img src="assets/images/red-panda/red-panda-happy.svg" alt="" role="presentation">
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="no-excuses" type="button">← Back</button>
+                    <button class="btn btn-primary" data-nav="things-i-love" type="button">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 6: THINGS I LOVE ABOUT YOU ===== -->
+        <section id="page-things-i-love" class="page" aria-label="Things I love about you">
+            <div class="page-content">
+                <h2 class="page-title">Things I love about you</h2>
+                <p class="page-text">A few of many. Not even close to all.</p>
+                
+                <div class="love-list" role="list">
+                    <div class="love-item" role="listitem">
+                        <span class="love-number" aria-hidden="true">01</span>
+                        <p>Your laugh. The real one, not the polite one. The one that makes me laugh too.</p>
+                    </div>
+                    <div class="love-item" role="listitem">
+                        <span class="love-number" aria-hidden="true">02</span>
+                        <p>The way you focus when you're doing assignments. Completely locked in. I just sit there like "...wow."</p>
+                    </div>
+                    <div class="love-item" role="listitem">
+                        <span class="love-number" aria-hidden="true">03</span>
+                        <p>The way you talk. I could listen to you literally forever.</p>
+                    </div>
+                    <div class="love-item love-item-placeholder" role="listitem">
+                        <span class="love-number" aria-hidden="true">04</span>
+                        <p><em>(More to come... there are too many to fit here.)</em></p>
+                    </div>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="two-years" type="button">← Back</button>
+                    <button class="btn btn-primary" data-nav="sea-lion-dino" type="button">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 7: SEA LION & DINO ===== -->
+        <section id="page-sea-lion-dino" class="page" aria-label="Sea lion and Dino">
+            <div class="page-content">
+                <h2 class="page-title">The sea lion says...</h2>
+                
+                <div class="sea-lion-interaction" id="sea-lion-interaction" role="button" tabindex="0" aria-label="Tap the sea lion to hear it speak">
+                    <div class="sea-lion-character" id="sea-lion-character">
+                        <img src="assets/images/sea-lion/sea-lion-neutral.svg" alt="Sea lion" id="sea-lion-img">
+                    </div>
+                    <div class="ogh-display">
+                        <p class="ogh-text" id="ogh-text" aria-live="polite">Tap the sea lion</p>
+                    </div>
+                </div>
+                
+                <p class="page-text">Our thing. Always.</p>
+                
+                <div class="dino-character" id="dino-character" aria-label="Dino looking sad">
+                    <img src="assets/images/dino/dino-sad.svg" alt="Dino looking sad" id="dino-img">
+                    <p class="dino-caption">Dino is sad because you're sad. Please don't make Dino sad.</p>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="things-i-love" type="button">← Back</button>
+                    <button class="btn btn-primary" data-nav="the-apology" type="button">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 8: THE APOLOGY ===== -->
+        <section id="page-the-apology" class="page" aria-label="The apology">
+            <div class="page-content">
+                <h2 class="page-title">The apology</h2>
+                <p class="page-text">
+                    Mbul, I'm sorry. Really sorry.
+                </p>
+                <p class="page-text">
+                    I'm sorry for breaking my promise. For making you feel like you weren't worth the effort. For being lazy when I should have been thoughtful.
+                </p>
+                <p class="page-text">
+                    You deserve someone who keeps their word. And I'm trying to be that person.
+                </p>
+                <p class="page-text">
+                    This isn't me asking for forgiveness. This is me admitting I was wrong.
+                </p>
+                <div class="red-panda-sitting" aria-hidden="true">
+                    <img src="assets/images/red-panda/red-panda-sad.svg" alt="" role="presentation">
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="sea-lion-dino" type="button">← Back</button>
+                    <button class="btn btn-primary" data-nav="the-promise" type="button">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 9: THE PROMISE ===== -->
+        <section id="page-the-promise" class="page" aria-label="The promise">
+            <div class="page-content">
+                <h2 class="page-title">The promise</h2>
+                <p class="page-text">
+                    I promise to do better. Not perfectly — I'm still me — but better.
+                </p>
+                <p class="page-text">
+                    I promise to treat the small promises like big ones. Because when it's a promise to you, they are.
+                </p>
+                <p class="page-text">
+                    And I promise... the padel video is coming. For real this time.
+                </p>
+                <div class="red-panda-peek" aria-hidden="true">
+                    <img src="assets/images/red-panda/red-panda-neutral.svg" alt="" role="presentation">
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="the-apology" type="button">← Back</button>
+                    <button class="btn btn-primary" data-nav="response" type="button">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 10: RESPONSE INTERACTION ===== -->
+        <section id="page-response" class="page" aria-label="Your response">
+            <div class="page-content">
+                <h2 class="page-title">Can I make it up to you?</h2>
+                <p class="page-text">No pressure. Really.</p>
+                
+                <div class="response-buttons" role="group" aria-label="Response options">
+                    <button class="btn btn-yes" id="btn-yes" data-response="yes" type="button">
+                        <span class="btn-emoji" aria-hidden="true">❤️</span>
+                        <span class="btn-text">Yes</span>
+                    </button>
+                    <button class="btn btn-mad" id="btn-mad" data-response="mad" type="button">
+                        <span class="btn-emoji" aria-hidden="true">😤</span>
+                        <span class="btn-text">I'm still mad</span>
+                    </button>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="the-promise" type="button">← Back</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE 11: FINAL LETTER ===== -->
+        <section id="page-final-letter" class="page" aria-label="Final letter">
+            <div class="page-content">
+                <!-- Positive Response -->
+                <div class="final-message final-yes" id="final-yes">
+                    <h2 class="page-title">WAIT... REALLY?!</h2>
+                    <p class="page-text emphasis">Okay. Now I actually have to prove it.</p>
+                    <p class="page-text">
+                        Thank you for giving me another chance. I won't waste it.
+                    </p>
+                    <div class="red-panda-sitting" aria-hidden="true">
+                        <img src="assets/images/red-panda/red-panda-celebrating.svg" alt="" role="presentation">
+                    </div>
+                </div>
+                
+                <!-- Still Mad Response -->
+                <div class="final-message final-mad hidden" id="final-mad">
+                    <h2 class="page-title">That's okay.</h2>
+                    <p class="page-text">
+                        You don't have to stop being mad just because I said sorry.
+                    </p>
+                    <p class="page-text">
+                        Take your time. I'll be here. And the padel video will still be here too (actually sent this time).
+                    </p>
+                    <div class="red-panda-sitting" aria-hidden="true">
+                        <img src="assets/images/red-panda/red-panda-sad.svg" alt="" role="presentation">
+                    </div>
+                </div>
+                
+                <!-- Final Letter Content -->
+                <div class="final-letter-content hidden" id="final-letter-content">
+                    <div class="letter-paper">
+                        <p class="letter-greeting">My Mbul,</p>
+                        <p class="letter-body">
+                            I'm sorry. For the video. For not being better. For the times I let you down.
+                        </p>
+                        <p class="letter-body">
+                            Thank you for two years of Tomoro meetings and December 14ths. For your laugh. For your focus. For the way you talk. For every inside joke — especially the sea lions.
+                        </p>
+                        <p class="letter-body">
+                            I'll do better. I promise.
+                        </p>
+                        <p class="letter-body">
+                            The padel video is coming. I swear. 🙈
+                        </p>
+                        <p class="letter-closing">
+                            Ogh ogh ogh,<br>
+                            <span class="signature">Kevin</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-nav="response" type="button">← Back</button>
+                    <button class="btn btn-primary" id="restart-btn" type="button">Start Over ↺</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (only visible on final page) -->
+    <footer class="site-footer" id="site-footer">
+        <p>Made with ❤️ (and guilt) for Mbul</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/music.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

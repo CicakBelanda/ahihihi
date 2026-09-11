@@ -1,0 +1,23 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="red-panda-embarrassed">
+  <ellipse cx="100" cy="140" rx="45" ry="50" fill="#D95D72"/>
+  <circle cx="100" cy="80" r="38" fill="#E88B5A"/>
+  <circle cx="70" cy="50" r="14" fill="#E88B5A"/>
+  <circle cx="130" cy="50" r="14" fill="#E88B5A"/>
+  <circle cx="70" cy="50" r="8" fill="#FFDDE3"/>
+  <circle cx="130" cy="50" r="8" fill="#FFDDE3"/>
+  <!-- Embarrassed eyes (looking away) -->
+  <ellipse cx="80" cy="86" rx="4" ry="6" fill="#2B2426"/>
+  <ellipse cx="116" cy="86" rx="4" ry="6" fill="#2B2426"/>
+  <ellipse cx="81" cy="84" rx="1.5" ry="1.5" fill="#FFFFFF"/>
+  <ellipse cx="117" cy="84" rx="1.5" ry="1.5" fill="#FFFFFF"/>
+  <!-- Blush -->
+  <circle cx="76" cy="92" r="7" fill="#F58FA3" opacity="0.8"/>
+  <circle cx="124" cy="92" r="7" fill="#F58FA3" opacity="0.8"/>
+  <ellipse cx="100" cy="95" rx="6" ry="4" fill="#2B2426"/>
+  <!-- Nervous smile -->
+  <path d="M93 101 Q100 105 107 101" fill="none" stroke="#2B2426" stroke-width="2" stroke-linecap="round"/>
+  <!-- Paws up -->
+  <circle cx="60" cy="120" r="12" fill="#E88B5A"/>
+  <circle cx="140" cy="120" r="12" fill="#E88B5A"/>
+  <path d="M145 150 Q165 140 160 120" fill="#E88B5A" stroke="#E88B5A" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="dino-supportive">
+  <!-- Body -->
+  <ellipse cx="100" cy="140" rx="45" ry="40" fill="#7BA47E"/>
+  <!-- Head -->
+  <circle cx="100" cy="80" r="30" fill="#8DBB8F"/>
+  <!-- Eyes (warm) -->
+  <ellipse cx="88" cy="78" rx="5" ry="6" fill="#2B2426"/>
+  <ellipse cx="112" cy="78" rx="5" ry="6" fill="#2B2426"/>
+  <ellipse cx="89" cy="76" rx="2" ry="2" fill="#FFFFFF"/>
+  <ellipse cx="113" cy="76" rx="2" ry="2" fill="#FFFFFF"/>
+  <!-- Warm smile -->
+  <path d="M92 92 Q100 98 108 92" fill="none" stroke="#2B2426" stroke-width="2" stroke-linecap="round"/>
+  <!-- Spikes -->
+  <polygon points="60,110 68,95 76,110" fill="#5D8A60"/>
+  <polygon points="80,105 88,88 96,105" fill="#5D8A60"/>
+  <polygon points="104,105 112,88 120,105" fill="#5D8A60"/>
+  <polygon points="124,110 132,95 140,110" fill="#5D8A60"/>
+  <!-- Reaching out arm (supportive) -->
+  <ellipse cx="55" cy="130" rx="14" ry="6" fill="#7BA47E" transform="rotate(-20 55 130)"/>
+  <ellipse cx="145" cy="130" rx="14" ry="6" fill="#7BA47E" transform="rotate(20 145 130)"/>
+</svg>

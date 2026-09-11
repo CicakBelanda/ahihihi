@@ -1,0 +1,28 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="red-panda">
+  <!-- Body -->
+  <ellipse cx="100" cy="140" rx="45" ry="50" fill="#D95D72"/>
+  <!-- Head -->
+  <circle cx="100" cy="80" r="38" fill="#E88B5A"/>
+  <!-- Ears -->
+  <circle cx="70" cy="50" r="14" fill="#E88B5A"/>
+  <circle cx="130" cy="50" r="14" fill="#E88B5A"/>
+  <circle cx="70" cy="50" r="8" fill="#FFDDE3"/>
+  <circle cx="130" cy="50" r="8" fill="#FFDDE3"/>
+  <!-- Face markings -->
+  <ellipse cx="82" cy="85" rx="12" ry="10" fill="#FFFFFF"/>
+  <ellipse cx="118" cy="85" rx="12" ry="10" fill="#FFFFFF"/>
+  <ellipse cx="82" cy="85" rx="6" ry="8" fill="#2B2426"/>
+  <ellipse cx="118" cy="85" rx="6" ry="8" fill="#2B2426"/>
+  <ellipse cx="84" cy="83" rx="2" ry="2" fill="#FFFFFF"/>
+  <ellipse cx="120" cy="83" rx="2" ry="2" fill="#FFFFFF"/>
+  <!-- Nose -->
+  <ellipse cx="100" cy="95" rx="6" ry="4" fill="#2B2426"/>
+  <!-- Mouth -->
+  <path d="M95 100 Q100 106 105 100" fill="none" stroke="#2B2426" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="76" cy="92" r="5" fill="#F58FA3" opacity="0.6"/>
+  <circle cx="124" cy="92" r="5" fill="#F58FA3" opacity="0.6"/>
+  <!-- Tail -->
+  <path d="M145 150 Q170 130 165 100 Q160 80 150 75" fill="#E88B5A" stroke="#E88B5A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M148 145 Q165 125 162 105" fill="none" stroke="#FFDDE3" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+</svg>
